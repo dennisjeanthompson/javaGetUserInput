@@ -1,0 +1,27 @@
+'use strict';
+
+console.log('Hello world');
+
+var readline = require('readline');
+var r1 = readline.createInterface({input: process.stdin,output: process.stdout });
+
+function getUserInput() {
+    r1.question("Enter you're input", (input) => {
+        if (input.toLowerCase () === 'exit') {
+            r1.close();
+
+        }
+        else {
+            console.log("user input is", input);
+            getUserInput();
+        }
+
+
+
+
+
+
+    });
+
+}
+getUserInput();
